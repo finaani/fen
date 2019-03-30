@@ -115,6 +115,27 @@ On click the images will be displayed at normal size to complete the effect
 }
 /*Clicking on any thumbnail now should activate the image related to it*/
 
+
+
+/**geometric art */
+html {
+  height: 100%;
+  /**background: linear-gradient(to bottom, #412f50 0%,#131837 100%);
+}*/
+
+body {
+  margin: 0;
+  padding: 0;
+}
+#interactive-object canvas {
+  display: block;
+  width: 300px;
+  height: 300px;
+  margin: 60px auto 0 auto;
+}
+
+
+
 /* <!-- line design under names -->*/
 	#container .prevButton:hover{
 			background-position:left bottom;left:0;}
