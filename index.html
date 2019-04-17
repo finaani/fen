@@ -24,82 +24,33 @@
 
 <body>
 
-<!-- start call on js for web -->
-  <script>
-      $(function()
-      {
-          var app = $('#app'), init = $('#init'), layer = $('#layer'), input = $('#inp-cover input'), button = $('button');
-
-          function toggleApp()
-          {
-              app.toggleClass('opened');
-
-              if( button.hasClass('shadow') )
-                  button.toggleClass('shadow');
-              else
-                  setTimeout(function(){ button.toggleClass('shadow'); },300);
-
-              if( app.hasClass('opened') )
-              {
-                  setTimeout(function(){ input.toggleClass('move-up'); },200);
-                  setTimeout(function(){ input.focus(); },500);
-              }
-              else
-                  setTimeout(function(){ input.toggleClass('move-up').val(''); },200);
-
-              if( ! layer.hasClass('sl') )
-              {
-                  setTimeout(function()
-                  {
-                      layer.addClass('sl');
-                  },800);
-              }
-              else
-                  setTimeout(function(){ layer.removeClass('sl'); },300);
-          }
-
-          layer.on('click',toggleApp);
-          init.on('click',toggleApp);
-      });
-  </script>
-  <!-- end of call on js -->
-
-  <!-- Navigation -->
-  <nav>
-  <a id="pull">Toogle Menu</a>
-  <ul>
-    <li><a href="#About Me">About Me</a></li>
-    <li><a href="#Artist Statement">Artist Statement</a></li>
-    <li><a href="#Portfolio">Portfolio</a></li>
-    <li><a href="#Art">Art</a></li>
-    <li><a href="#Contact Me">Contact Me </a></li>
-    <li><a href="#GeoSketch">Bye!</a></li>
-  </ul>
-</nav>
-
-<section id="About Me" class="section About Me">
-  <h1>About Me</h1>
-</section>
-
-<section id="Artist Statement" class="section Artist Statement">
-  <h1>Artist Statement</h1>
-</section>
-
-<section id="Portfolio" class="section Portfolio">
-  <h1>Portfolio</h1>
-</section>
-
-<section id="Art" class="section Art">
-  <h1>Art</h1>
-</section>
-
-<section id="Contact Me" class="section Contact Me">
-  <h1>Contact Me</h1>
-</section>
-
-<section id="GeoSketch" class="section GeoSketch">
-  <h1>Thank you for visting!</h1>
-</section>
+<!-- Navigation -->
+  <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+    <div class="container">
+      <div class="navbar-header page-scroll">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><span class="sr-only">Toggle navigation</span> Menu <em class="fa fa-bars"></em></button>
+        <a class="navbar-brand" href="#page-top">Noor Bondogji</a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="hidden"></li>
+          <a href="#page-top"></a>
+          <li class="page-scroll">
+            <a href="#Home">Home</a>
+          </li>
+          <li class="page-scroll">
+            <a href="#about">Artist Statement</a>
+          </li>
+          <li class="page-scroll">
+            <a href="#portfolio">Portfolio</a>
+          </li>
+          <li class="page-scroll">
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
   <!-- Header -->
   <header>
@@ -192,21 +143,118 @@
         </div>
 
         <br><br>
-<!-- geometric artwork -->
+        
+<!--    geo artwork      -->
+        
+  <!-- <button onclick="myFunction()">Click to toggle</button> -->
+          <div id="myDIV">Chek out my Sketch. <span class="subtext"><!-- geometric artwork -->
 
-<div id="interactive-object"></div>
+          <div id="interactive-object">
+
+            <script src="http://threejsplaygnd.brangerbriz.net/js/three.min.js"></script>
+            <script src="http://threejsplaygnd.brangerbriz.net/js/Detector.js"></script>
+
+            <script>
+              if (!Detector.webgl) Detector.addGetWebGLMessage();
+
+              var camera, scene, renderer;
+              var geometry, material, mesh;
+
+
+              function setup() {
+
+                var W = window.innerWidth,
+                  H = window.innerHeight;
+                renderer = new THREE.WebGLRenderer({
+                  preserveDrawingBuffer: true
+                });
+                renderer.autoClearColor = false;
+                THREE.WebGLRenderer();
+                renderer.setSize(W, H);
+                document.body.appendChild(renderer.domElement);
+
+                camera = new THREE.PerspectiveCamera(50, W / H, 1, 10000);
+                camera.position.z = 500;
+
+                scene = new THREE.Scene();
+
+
+
+
+                // paste your code from the geometryGUI here
+                geometry = new THREE.TorusKnotGeometry(100, 40, 64, 8, 2, 3, 1);
+                material = new THREE.MeshNormalMaterial({
+                  shading: THREE.FlatShading
+                });
+                mesh = new THREE.Mesh(geometry, material);
+                mesh.scale.x = mesh.scale.y = mesh.scale.z = 0.69;
+                mesh.rotation.z = 1.76;
+                scene.add(mesh);
+
+              }
+
+              function draw() {
+
+                requestAnimationFrame(draw);
+
+
+
+                mesh.position.x = Math.sin(Date.now() * 0.001) * 50;
+                mesh.rotation.z = Date.now() * 0.0005;
+
+                mesh.rotation.x = Date.now() * 0.0005;
+                mesh.rotation.y = Date.now() * 0.0002;
+                mesh.rotation.z = Date.now() * 0.001;
+
+                camera.position.x = Math.sin(Date.now() * 0.002) * 50;
+
+
+                renderer.render(scene, camera);
+
+              }
+
+
+
+              setup();
+              draw();
+            </script></div>
+            <!-- end of geo artwork -->
+
+<span class="subtext"></span>
+<!-- toggle button -->
+          <button class="btn1">Surprise</button>
+
+          <button class="btn2">Hide</button>
+
+          <div class="container">
+            <div class="carousel">
+              <div class="carousel__face"><span>Digital Art is something</span></div>
+              <div class="carousel__face"><span>Very special</span></div>
+              <div class="carousel__face"><span>Create your element</span></div>
+              <div class="carousel__face"><span>For you</span></div>
+              <div class="carousel__face"><span>Just give it go!</span></div>
+              <div class="carousel__face"><span>Take a spin</span></div>
+              <div class="carousel__face"><span>And see</span></div>
+              <div class="carousel__face"><span>You bring things to life</span></div>
+              <div class="carousel__face"><span>Just Try!</span></div>
+            </div>
+          </div>
+
+        </div>
 
         </center>
 
         <!-- We will use PrefixFree - a script that takes care of CSS3 vendor prefixes
 You can download it from http://leaverou.github.com/prefixfree/ -->
-        /*<script src="http://thecodeplayer.com/uploads/js/prefixfree.js" type="text/javascript"></script>*/
+        <script src="http://thecodeplayer.com/uploads/js/prefixfree.js" type="text/javascript"></script>
 
       </div>
 
     </div>
     </div>
 
+
+  </section>
 
   </section>
   <!-- Contact Section -->
