@@ -1,271 +1,402 @@
-*
-{
-    outline: none;
+body {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  background-color: #E8D5B7;
 }
 
-html, body
-{
-    height: 100%;
-    min-height: 100%;
+p {
+  font-size: 20px;
 }
 
-body
-{
-    margin: 0;
+strong {
+  font-weight: 700;
+  color: #FC3A51;
 }
 
-body, input
-{
-    cursor: url(http://k003.kiwi6.com/hotlink/vp054ir5gt/c1.png) 32 32, auto;
-    cursor: -webkit-image-set(url(http://k003.kiwi6.com/hotlink/vp054ir5gt/c1.png) 1x,url(http://k003.kiwi6.com/hotlink/z6fy599487/c2.png) 2x) 32 32, auto;
+a,
+a:hover,
+a:focus,
+a:active,
+a.active {
+  color: #FFFFFF;
+  background-color: #FC3A51;
+  outline: none;
 }
 
-body:active, input:active
-{
-    cursor: url(http://k003.kiwi6.com/hotlink/3p6w4icbzt/c1a.png) 32 32, auto;
-    cursor: -webkit-image-set( url(http://k003.kiwi6.com/hotlink/3p6w4icbzt/c1a.png) 1x, url(http://k003.kiwi6.com/hotlink/6ma7828al1/c2a.png) 2x ) 32 32, auto;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", Georgia, "Palatino Linotype", serif;
+  font-weight: 700;
 }
 
-#app-cover
-{
-    position: absolute;
-    top: 50%;
-    right: 0;
-    left: 0;
-    width: 434px;
-    margin: -41px auto 0 auto;
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans';
 }
 
-#app
-{
-    position: relative;
-    width: 82px;
-    height: 82px;
-    border-radius: 120px;
-    margin: 0 auto;
-    transition: 0.15s ease width;
-    z-index: 2;
+h1 {
+  color: #fff;
+  text-align: center;
+  font-weight: 300;
+}
+/* carasoul slides */
+body {
+  background: #E8D5B7;
+  text-align: center;
+  font-family: sans-serif;
+  color: #FC3A51;
+}
+.container {
+  /* position: relative; */
+  width: 320px;
+  margin: 100px auto 0 auto;
 }
 
-form
-{
-    position: relative;
-    height: 82px;
-    cursor: auto;
-    border-radius: 120px;
+.carousel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: rotate360 60s infinite forwards linear;
+}
+.carousel__face {
+  position: absolute;
+  width: 180px;
+  height: 120px;
+  top: 20px;
+  left: 0;
+  right: 0;
+  background-size: cover;
+  box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.5);
+  display: flex;
 }
 
-#f-element
-{
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    overflow: hidden;
-    border-radius: 120px;
+span {
+  margin: auto;
+  font-size: 2rem;
 }
 
-#inp-cover
-{
-    position: absolute;
-    top: 0;
-    right: 41px;
-    bottom: 0;
-    left: 0;
-    padding: 0 35px;
-    background-color: #fff;
-}
 
-input
-{
-    display: block;
-    width: 100%;
-    font-size: 19px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #00688a;
-    border: 0;
-    padding: 30px 0;
-    margin: 0;
-    margin-top: 52px;
-    line-height: 1;
-    background-color: transparent;
-    transition: 0.15s ease margin-top;
-    cursor: auto;
-}
+.carousel__face:nth-child(1) {
+  background-image: url("https://images.pexels.com/photos/1141853/pexels-photo-1141853.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  transform: rotateY(  0deg) translateZ(430px); }
+.carousel__face:nth-child(2) {
+  background-image: url("https://images.pexels.com/photos/1258865/pexels-photo-1258865.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    transform: rotateY( 40deg) translateZ(430px); }
+.carousel__face:nth-child(3) {
+  background-image: url("https://images.pexels.com/photos/808466/pexels-photo-808466.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  transform: rotateY( 80deg) translateZ(430px); }
+.carousel__face:nth-child(4) {
+  background-image: url("https://images.pexels.com/photos/1394841/pexels-photo-1394841.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  transform: rotateY(120deg) translateZ(430px); }
+.carousel__face:nth-child(5) {
+  background-image: url("https://images.pexels.com/photos/969679/pexels-photo-969679.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+ transform: rotateY(160deg) translateZ(430px); }
+.carousel__face:nth-child(6) {
+  background-image: url("https://images.pexels.com/photos/1834400/pexels-photo-1834400.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+ transform: rotateY(200deg) translateZ(430px); }
+.carousel__face:nth-child(7) {
+  background-image: url("https://images.pexels.com/photos/1415268/pexels-photo-1415268.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+ transform: rotateY(240deg) translateZ(430px); }
+.carousel__face:nth-child(8) {
+  background-image: url("https://images.pexels.com/photos/135018/pexels-photo-135018.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  transform: rotateY(280deg) translateZ(430px); }
+.carousel__face:nth-child(9) {
+  background-image: url("https://images.pexels.com/photos/1175135/pexels-photo-1175135.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  transform: rotateY(320deg) translateZ(430px); }
 
-button
-{
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 82px;
-    height: 82px;
-    color: #fff;
-    font-size: 30px;
-    line-height: 1;
-    padding: 26px;
-    margin: 0;
-    border: 0;
-    background-color: #1eaddc;
-    transition: 0.2s ease background-color;
-    border-radius: 50%;
-}
 
-button.shadow
-{
-    box-shadow: 0 10px 30px #d0d0d0;
-}
 
-button i.fas
-{
-    display: block;
-    line-height: 1;
+@keyframes rotate360 {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
 }
+/* carasoul ends */
 
-#layer
-{
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background-color: #1eaddc;
-    transition: 0.9s ease all;
-    z-index: 1;
-}
 
-#layer.sl
-{
-    transition: 0.3s ease all;
-}
-
-#layer, #init
-{
-    position: fixed;
-    top: 50%;
-    margin: -40px auto 0 auto;
-}
-
-#layer
-{
-    right: -100px;
-    left: -100px;
-}
-
-#init
-{
-    right: 0;
-    left: 0;
-    width: 82px;
-    height: 82px;
-    z-index: 2;
-}
-
-#app.opened
-{
-    width: 434px;
-    box-shadow: 0 10px 30px #0190bf;
-}
-.opened input.move-up
-{
-    margin-top: 0;
-}
-
-.opened button
-{
-    color: #1eaddc;
-    background-color: #fff;
-    box-shadow: none;
-    cursor: pointer;
-}
-
-#app.opened + #layer
-{
-    width: 4000px;
-    height: 4000px;
-    margin-top: -2000px;
-    opacity: 1;
-    z-index: 0;
-}
-
-#app.opened ~ #init
-{
-    z-index: -1;
-}
-/* end of web style */
 
 /*slideshow*/
-
-* {margin: 0; padding: 0;}
-body
-
-.slider{
-	width: 640px; /*Same as width of the large image*/
-	position: relative;
-	/*Instead of height we will use padding*/
-	padding-top: 320px; /*That helps bring the labels down*/
-
-	margin: 100px auto;
-
-	/*Lets add a shadow*/
-	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+* {
+  margin: 0;
+  padding: 0;
 }
 
+body .slider {
+  width: 640px;
+  /*Same as width of the large image*/
+  position: relative;
+  /*Instead of height we will use padding*/
+  padding-top: 320px;
+  /*That helps bring the labels down*/
+  margin: 100px auto;
+  /*Lets add a shadow*/
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+}
 
 /*Last thing remaining is to add transitions*/
-.slider>img{
-	position: absolute;
-	left: 0; top: 0;
-	transition: all 0.5s;
+.slider>img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 0.5s;
 }
 
 .slider input[name='slide_switch'] {
-	display: none;
+  display: none;
 }
 
 .slider label {
-	/*Lets add some spacing for the thumbnails*/
-	margin: 18px 0 0 18px;
-	border: 3px solid #999;
-
-	float: left;
-	cursor: pointer;
-	transition: all 0.5s;
-
-	/*Default style = low opacity*/
-	opacity: 0.6;
+  /*Lets add some spacing for the thumbnails*/
+  margin: 18px 0 0 18px;
+  border: 3px solid #999;
+  float: left;
+  cursor: pointer;
+  transition: all 0.5s;
+  /*Default style = low opacity*/
+  opacity: 0.6;
 }
 
-.slider label img{
-	display: block;
+.slider label img {
+  display: block;
 }
 
 /*Time to add the click effects*/
 .slider input[name='slide_switch']:checked+label {
-	border-color: #666;
-	opacity: 1;
+  border-color: #666;
+  opacity: 1;
 }
+
 /*Clicking any thumbnail now should change its opacity(style)*/
 /*Time to work on the main images*/
-.slider input[name='slide_switch'] ~ img {
-	opacity: 0;
-	transform: scale(1.1);
+.slider input[name='slide_switch']~img {
+  opacity: 0;
+  transform: scale(1.1);
 }
+
 /*That hides all main images at a 110% size
 On click the images will be displayed at normal size to complete the effect
 */
 .slider input[name='slide_switch']:checked+label+img {
-	opacity: 1;
-	transform: scale(1);
+  opacity: 1;
+  transform: scale(1);
 }
+
 /*Clicking on any thumbnail now should activate the image related to it*/
+/* <!-- line design under names -->*/
+#container .prevButton:hover {
+  background-position: left bottom;
+  left: 0;
+}
+
+hr.cogs-light,
+hr.cogs-dark {
+  padding: 0;
+  border: none;
+  border-top: solid 2px;
+  text-align: center;
+  max-width: 250px;
+  margin: 25px auto 30px;
+}
+
+hr.cogs-light:after,
+hr.cogs-dark:after {
+  content: "\f085";
+  font-family: FontAwesome;
+  display: inline-block;
+  position: relative;
+  top: -0.8em;
+  font-size: 2em;
+  padding: 0 0.25em;
+}
+
+hr.cogs-light {
+  border-color: white;
+}
+
+hr.cogs-light:after {
+  background-color: #CEBEA5;
+  color: white;
+}
+
+hr.cogs-dark {
+  border-color: #FC3A51;
+}
+
+hr.cogs-dark:after {
+  background-color: #E8D5B7;
+  color: #FC3A51;
+}
+
+header {
+  text-align: center;
+  background: #CEBEA5;
+  color: white;
+}
+
+header .container {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+header img {
+  display: block;
+  margin: 0 auto 20px;
+}
+
+header .intro-text .name {
+  display: block;
+  font-family: "Playfair Display", Georgia, "Palatino Linotype", serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 2em;
+}
+
+header .intro-text .subtext {
+  font-size: 1.25em;
+  font-weight: 300;
+}
+
+/* <!-- header/fonts-->*/
+@media (min-width: 768px) {
+  header .container {
+    padding-top: 200px;
+    padding-bottom: 100px;
+  }
+
+  header .intro-text .name {
+    font-size: 4.75em;
+  }
+
+  header .intro-text .subtext {
+    font-family: "Playfair Display", Georgia, "Palatino Linotype", serif;
+    font-size: 1.75em;
+  }
+}
+
+/* <!-- name logo color -->*/
+.navbar-custom {
+  background: #FC3A51;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: none;
+}
+
+.navbar-custom a:focus {
+  outline: none;
+}
+
+.navbar-custom .navbar-brand {
+  color: white;
+}
+
+.navbar-custom .navbar-brand:hover,
+.navbar-custom .navbar-brand:focus,
+.navbar-custom .navbar-brand:active,
+.navbar-custom .navbar-brand.active {
+  color: white;
+}
+
+.navbar-custom .navbar-nav {
+  letter-spacing: 1px;
+}
+
+/* <!-- link bar logo color -->*/
+.navbar-custom .navbar-nav li a {
+  color: white;
+}
+
+.navbar-custom .navbar-nav li a:hover {
+  color: #CEBEA5;
+  outline: none;
+}
+
+.navbar-custom .navbar-nav li a:focus,
+.navbar-custom .navbar-nav li a:active {
+  color: white;
+}
+
+.navbar-custom .navbar-nav li.active a {
+  color: white;
+  background: #CEBEA5;
+}
+
+.navbar-custom .navbar-nav li.active a:hover,
+.navbar-custom .navbar-nav li.active a:focus,
+.navbar-custom .navbar-nav li.active a:active {
+  color: white;
+  background: #CEBEA5;
+}
+
+.navbar-custom .navbar-toggle {
+  color: white;
+  text-transform: uppercase;
+  font-size: 10px;
+  border-color: white;
+}
+
+.navbar-custom .navbar-toggle:hover,
+.navbar-custom .navbar-toggle:focus {
+  background-color: #CEBEA5;
+  color: white;
+  border-color: #CEBEA5;
+}
+
+section {
+  padding: 100px 0;
+}
+
+section h2 {
+  margin: 0;
+  font-size: 3em;
+}
+
+section.odd {
+  background: #CEBEA5;
+  color: white;
+}
+
+@media (max-width: 767px) {
+  section {
+    padding: 75px 0;
+  }
+}
+
+ul position: relative list-style: none margin: 0 padding: 0 border-radius: 5px li display: inline-block margin-right: 15px img max-width: 100px .close display: none div background: rgba(0, 0, 0, .9) opacity: 0 z-index: -1 position: absolute top: 0 right: 0 bottom: 0 left: 0 transition: all .15s ease-out &:target opacity: 1 display: block position: fixed z-index: 2 &~ul position: fixed top: 25px left: 50% transform: translateX(-50%) z-index: 3 text-align: center li margin: 0 img border: 1px solid white .close font-size: 20px font-weight: bold display: block position: absolute left: 105% top: 0 img margin: auto border: 4px solid white position: absolute top: 50% left: 50% transform: translate(-50%, -50%) a[href="#deselect"] color: white text-decoration: none padding: 5px body padding: 15vw img max-width: 100% vertical-align: top #portfolio .portfolio-item {
+  margin: 0 0 15px;
+  right: 0;
+}
+
+@media (min-width: 767px) {
+  #portfolio .portfolio-item {
+    margin: 0 0 30px;
+  }
+}
+
+footer {
+  color: white;
+}
+
+footer .footer-below {
+  padding: 15px 0;
+  background-color: #FC3A51;
+}
 
 
-
-/**geometric art */
-html {
-  height: 100%;
-  /**background: linear-gradient(to bottom, #412f50 0%,#131837 100%);
-}*/
 
 body {
   margin: 0;
@@ -278,349 +409,78 @@ body {
   margin: 60px auto 0 auto;
 }
 
-
-
-/* <!-- line design under names -->*/
-	#container .prevButton:hover{
-			background-position:left bottom;left:0;}
-hr.cogs-light,
-hr.cogs-dark {
-    padding: 0;
-    border: none;
-    border-top: solid 2px;
-    text-align: center;
-    max-width: 250px;
-    margin: 25px auto 30px;
-}
-hr.cogs-light:after,
-hr.cogs-dark:after {
-    content: "\f085";
-    font-family: FontAwesome;
-    display: inline-block;
-    position: relative;
-    top: -0.8em;
-    font-size: 2em;
-    padding: 0 0.25em;
-}
-
-hr.cogs-light {
-    border-color: white;
-}
-
-hr.cogs-light:after {
-    background-color: #CEBEA5;
-    color: white;
-}
-hr.cogs-dark {
-    border-color: #FC3A51;
-}
-
-hr.cogs-dark:after {
-    background-color: #E8D5B7;
-    color: #FC3A51;
-}
-
-header {
-    text-align: center;
-    background: #CEBEA5;
-    color: white;
-}
-
-header .container {
-    padding-top: 100px;
-    padding-bottom: 50px;
-}
-
-header img {
-    display: block;
-    margin: 0 auto 20px;
-}
-
-header .intro-text .name {
-    display: block;
-    font-family: "Playfair Display", Georgia, "Palatino Linotype", serif;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 2em;
-}
-
-header .intro-text .subtext {
-    font-size: 1.25em;
-    font-weight: 300;
-}
-
-/* <!-- header/fonts-->*/
-
-@media (min-width: 768px) {
-    header .container {
-        padding-top: 200px;
-        padding-bottom: 100px;
-    }
-    header .intro-text .name {
-        font-size: 4.75em;
-    }
-    header .intro-text .subtext {
-        font-family: "Playfair Display", Georgia, "Palatino Linotype", serif;
-        font-size: 1.75em;
-    }
-}
-
-/* <!-- name logo color -->*/
-.navbar-custom {
-    background: #FC3A51;
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
-    font-weight: 700;
-    border: none;
-}
-
-.navbar-custom a:focus {
-    outline: none;
-}
-
-.navbar-custom .navbar-brand {
-    color: white;
-}
-
-.navbar-custom .navbar-brand:hover,
-.navbar-custom .navbar-brand:focus,
-.navbar-custom .navbar-brand:active,
-.navbar-custom .navbar-brand.active {
-    color: white;
-}
-
-.navbar-custom .navbar-nav {
-    letter-spacing: 1px;
-}
-
-/* <!-- link bar logo color -->*/
-.navbar-custom .navbar-nav li a {
-    color: white;
-}
-
-.navbar-custom .navbar-nav li a:hover {
-    color: #CEBEA5;
-    outline: none;
-}
-
-.navbar-custom .navbar-nav li a:focus,
-.navbar-custom .navbar-nav li a:active {
-    color: white;
-}
-
-.navbar-custom .navbar-nav li.active a {
-    color: white;
-    background: #CEBEA5;
-}
-
-.navbar-custom .navbar-nav li.active a:hover,
-.navbar-custom .navbar-nav li.active a:focus,
-.navbar-custom .navbar-nav li.active a:active {
-    color: white;
-    background: #CEBEA5;
-}
-
-.navbar-custom .navbar-toggle {
-    color: white;
-    text-transform: uppercase;
-    font-size: 10px;
-    border-color: white;
-}
-
-.navbar-custom .navbar-toggle:hover,
-.navbar-custom .navbar-toggle:focus {
-    background-color: #CEBEA5;
-    color: white;
-    border-color: #CEBEA5;
-}
-
-section {
-    padding: 100px 0;
-}
-
-section h2 {
-    margin: 0;
-    font-size: 3em;
-}
-
-section.odd {
-    background: #CEBEA5;
-    color: white;
-}
-
-@media (max-width: 767px) {
-    section {
-        padding: 75px 0;
-    }
-}
-ul
-  position: relative
-  list-style: none
-  margin: 0
-  padding: 0
-  border-radius: 5px
-
-
-  li
-    display: inline-block
-    margin-right: 15px
-
-  img
-    max-width: 100px
-
-  .close
-    display: none
-
-
-div
-  background: rgba(0,0,0,.9)
-  opacity: 0
-  z-index: -1
-
-  position: absolute
-  top: 0
-  right: 0
-  bottom: 0
-  left: 0
-
-  transition: all .15s ease-out
-
-  &:target
-    opacity: 1
-    display: block
-    position: fixed
-    z-index: 2
-
-    & ~ ul
-      position: fixed
-      top: 25px
-      left: 50%
-      transform: translateX(-50%)
-      z-index: 3
-      text-align: center
-
-      li
-        margin: 0
-
-      img
-        border: 1px solid white
-
-      .close
-        font-size: 20px
-        font-weight: bold
-        display: block
-        position: absolute
-        left: 105%
-        top: 0
-
-  img
-    margin: auto
-    border: 4px solid white
-
-    position: absolute
-    top: 50%
-    left: 50%
-
-    transform: translate(-50%, -50%)
-
-a[href="#deselect"]
-  color: white
-  text-decoration: none
-  padding: 5px
-
-
-body
-  padding: 15vw
-
-img
-  max-width: 100%
-  vertical-align: top
-#portfolio .portfolio-item {
-    margin: 0 0 15px;
-    right: 0;
-}
-
-@media (min-width: 767px) {
-    #portfolio .portfolio-item {
-        margin: 0 0 30px;
-    }
-}
-footer {
-    color: white;
-}
-
-footer .footer-below {
-    padding: 15px 0;
-    background-color: #FC3A51;
-}
-
-
 /**
  * Polyfill for the vw, vh, vm units
  * Requires StyleFix from -prefix-free http://leaverou.github.com/prefixfree/
  * @author Lea Verou
  */
-
 (function() {
+  if( !window.StyleFix) {
+    return;
+  }
 
-if(!window.StyleFix) {
-	return;
+  // Feature test
+  var dummy=document.createElement('_').style,
+  units=['vw', 'vh', 'vmin', 'vmax'].filter(function(unit) {
+    dummy.width='';
+    dummy.width='10'+ unit;
+    return !dummy.width;
+  }
+
+  );
+
+  if( !units.length) {
+    return;
+  }
+
+  StyleFix.register(function(css) {
+    var w=innerWidth, h=innerHeight;
+    return css // Strip out comments that include viewport units. [\w\W] matches any char including new lines; equiv to (?:.|\n).
+    // More help: https://www.debuggex.com/r/SkAo6MSzOJjQ-UMK
+    .replace(RegExp('\/\*(?!<)[\w\W]*?\d\s*('+ units.join('|') + ')([\w\W]*?(?!>)[\w\W])?\*\/', 'gi'), '') // For help with this monster regex: https://www.debuggex.com/r/IJ5stKswd3W_Au-v
+
+    .replace(RegExp('(?:\/\*<)?(-?\d*\.?\d+)\s*('+ units.join('|') + ')\b(?:>\*\/-?\d*\.?\d+px)?', 'gi'),
+    function (match, num, unit) {
+      var factor;
+
+      switch (unit) {
+        case 'vw':
+          factor=w;
+        break;
+        case 'vh':
+          factor=h;
+        break;
+        case 'vmin':
+          factor=Math.min(w, h);
+        break;
+        case 'vmax':
+          factor=Math.max(w, h);
+        break;
+      }
+
+      return '/*<'+ num + unit + '>*/'+ (num * factor / 100) + 'px';
+    }
+
+    );
+  }
+
+  );
+  var styleFixResizeTimer;
+
+  var resizeListener=function () {
+    // 100ms interruptable delay because the computation is expensive
+    if (typeof styleFixResizeTimer !=='undefined') clearTimeout(styleFixResizeTimer);
+
+    styleFixResizeTimer=setTimeout(function () {
+      StyleFix.process();
+    }
+
+    , 100);
+  }
+
+  ;
+  window.addEventListener('resize', resizeListener, false);
+  window.addEventListener('orientationchange', resizeListener, false);
 }
 
-// Feature test
-var dummy = document.createElement('_').style,
-	units = ['vw', 'vh', 'vmin', 'vmax'].filter(function(unit) {
-		dummy.width = '';
-		dummy.width = '10' + unit;
-		return !dummy.width;
-	});
-
-if(!units.length) {
-	return;
-}
-
-StyleFix.register(function(css) {
-	var w = innerWidth, h = innerHeight;
-	return css
-	    // Strip out comments that include viewport units. [\w\W] matches any char including new lines; equiv to (?:.|\n).
-			// More help: https://www.debuggex.com/r/SkAo6MSzOJjQ-UMK
-			.replace(RegExp('\/\*(?!<)[\w\W]*?\d\s*(' + units.join('|') + ')([\w\W]*?(?!>)[\w\W])?\*\/', 'gi'), '')
-			// For help with this monster regex: https://www.debuggex.com/r/IJ5stKswd3W_Au-v
-			.replace(
-					RegExp('(?:\/\*<)?(-?\d*\.?\d+)\s*(' + units.join('|') + ')\b(?:>\*\/-?\d*\.?\d+px)?', 'gi'),
-					function (match, num, unit) {
-						var factor;
-						switch (unit) {
-							case 'vw':
-								factor = w;
-								break;
-							case 'vh':
-								factor = h;
-								break;
-							case 'vmin':
-								factor = Math.min(w, h);
-								break;
-							case 'vmax':
-								factor = Math.max(w, h);
-								break;
-						}
-						return '/*<' + num + unit + '>*/' + (num * factor / 100) + 'px';
-					}
-	);
-});
-
-var styleFixResizeTimer;
-
-var resizeListener = function () {
-	// 100ms interruptable delay because the computation is expensive
-	if (typeof styleFixResizeTimer !== 'undefined') clearTimeout(styleFixResizeTimer);
-	styleFixResizeTimer = setTimeout(function () {
-		StyleFix.process();
-	}, 100);
-};
-
-window.addEventListener('resize', resizeListener, false);
-window.addEventListener('orientationchange', resizeListener, false);
-
-})();
-
+)();
